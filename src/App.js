@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import data from "./data3.json";
 import { Col, Container, Row, ListGroup } from "react-bootstrap";
+import $ from "jquery";
 function App() {
     const array = data.map((item) => item.slice(11, 30));
     useEffect(() => {
@@ -9,6 +10,7 @@ function App() {
         spans.forEach((span) => {
             span.onclick = function () {
                 document.execCommand("copy");
+                $(span).addClass("fw-bold text-primary");
             };
             span.addEventListener("copy", function (event) {
                 event.preventDefault();
