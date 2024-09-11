@@ -5,7 +5,7 @@ import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import $ from "jquery";
 function App() {
     // const array = data.map((item) => item.slice(11, 30));
-    const array = data.map((item) => item.slice(11, 30));
+    const array = data.map((item) => item.replace(/\s+/g, ""));
     useEffect(() => {
         const spans = document.querySelectorAll("span");
         spans.forEach((span) => {
