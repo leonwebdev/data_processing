@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import data from "./data/data-03.json";
+import data from "./data/data-04.json";
 import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import $ from "jquery";
 function App() {
+    // const array = data.map((item) => item.slice(11, 30));
     const array = data.map((item) => item.slice(11, 30));
     useEffect(() => {
         const spans = document.querySelectorAll("span");
@@ -25,7 +26,7 @@ function App() {
         <div className="mt-3">
             <Container>
                 <Row className="justify-content-end">
-                    <Col xs={6}>
+                    <Col xs={8}>
                         <ListGroup as="ol" numbered>
                             {array.map((item, index) => (
                                 <ListGroup.Item as="li" key={index}>
